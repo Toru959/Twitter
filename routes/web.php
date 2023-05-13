@@ -22,6 +22,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/timeline', [TweetController::class, 'showTimelinePage']);
+Route::get('/timeline', [TweetController::class, 'showTimelinePage'])->name('timeline');
+Route::post('/timeline', [TweetController::class, 'postTweet']);
 
 require __DIR__.'/auth.php';

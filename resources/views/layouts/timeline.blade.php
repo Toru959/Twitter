@@ -9,7 +9,8 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="">
+        <form action="/timeline" method="post">
+            @csrf
             <div class="post-box">
                 <input type="text" name="tweet" placeholder="今何してる？">
                 <button type="submit" class="submit-btn">ツイート</button>
