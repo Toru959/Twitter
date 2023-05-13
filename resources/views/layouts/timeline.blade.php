@@ -33,7 +33,14 @@
                     @endif
                 </div>
             </div>
+            <div class="padding: 10px 40px">
+                @if($tweet->likedBy(Auth::user())->count() > 0)
+                    <a data-remote="true" rel="nofollow" deta-method="DELETE" href="/likes/{{ $tweet->likeBy(Auth::user())->firstOrFail()->id }}">いいね取り消し</a>
+                @else
+                    <a data-remote="true" rel="nofollow" deta-method="POST" href="/likes/{{ $tweet->id }}">いいね</a>
+                @endif
             @endforeach
+            </div>
         </div>
     </div>
 </body>

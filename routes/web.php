@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LikeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TweetController;
 use App\Http\Controllers\UserController;
@@ -29,5 +30,7 @@ Route::post('/timeline/delete/{id}', [TweetController::class, 'destroy'])->name(
 
 Route::get('/user/show/{id}', [UserController::class, 'show'])->name('show');
 
+Route::get('tweets/{tweet_id}/likes', [LikeController::class, 'store']);
+Route::get('likes/{like_id}', [LikeController::class, 'destroy']);
 
 require __DIR__.'/auth.php';
