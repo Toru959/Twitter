@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Twitter</title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/timeline.css') }}">
 </head>
 <body>
@@ -35,10 +36,11 @@
             </div>
             <div class="padding: 10px 40px">
                 @if($tweet->likedBy(Auth::user())->count() > 0)
-                    <a data-remote="true" rel="nofollow" deta-method="DELETE" href="/likes/{{ $tweet->likeBy(Auth::user())->firstOrFail()->id }}">いいね取り消し</a>
+                    <a href="/likes/{{ $tweet->likedBy(Auth::user())->firstOrFail()->id }}">いいね取り消し</a>
                 @else
-                    <a data-remote="true" rel="nofollow" deta-method="POST" href="/likes/{{ $tweet->id }}">いいね</a>
+                    <a href="/tweets/{{ $tweet->id }}/likes">いいね</a>
                 @endif
+                {{ $tweet->likes->count() }}
             @endforeach
             </div>
         </div>
