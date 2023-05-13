@@ -47,6 +47,13 @@ body{
 
 .tweet-box > div{
     width: 40%;
+    text-align: center;
+}
+
+.tweet-box > img{
+    width: 20%;
+    border: 1px solid black;
+    maring-right: 30px;
 }
 
 .destroy-btn{
