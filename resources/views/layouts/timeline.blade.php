@@ -17,7 +17,18 @@
             </div>
         </form>
         <div class="tweet-wrapper">
-            <div class="tweet-box"></div>
+            @foreach($tweets as $tweet)
+            <div class="tweet-box">
+                <div>{{ $tweet->tweet }}</div>
+                <div class="destroy-btn">
+                    <form action="{{ route('destroy', [$tweet->id]) }}" method="post">
+                        @csrf
+                        {{-- @method('delete') --}}
+                        <input type="submit" value="削除">
+                    </form>
+                </div>
+            </div>
+            @endforeach
         </div>
     </div>
 </body>

@@ -31,3 +31,24 @@ body{
     padding: 0.5rem;
     border: none;
 }
+
+.tweet-wrapper{
+
+}
+
+.tweet-box{
+    padding: 2rem;
+    border-top: 1px solid #E6ECF0;
+    border-bottom: 1px solid #E6ECF0;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.tweet-box > div{
+    width: 40%;
+}
+
+.destroy-btn{
+    text-align: right;
+}

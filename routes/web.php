@@ -24,5 +24,6 @@ Route::get('/dashboard', function () {
 
 Route::get('/timeline', [TweetController::class, 'showTimelinePage'])->name('timeline');
 Route::post('/timeline', [TweetController::class, 'postTweet']);
+Route::post('/timeline/delete/{id}', [TweetController::class, 'destroy'])->name('destroy');
 
 require __DIR__.'/auth.php';
