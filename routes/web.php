@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TweetController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,8 @@ Route::get('/dashboard', function () {
 Route::get('/timeline', [TweetController::class, 'showTimelinePage'])->name('timeline');
 Route::post('/timeline', [TweetController::class, 'postTweet']);
 Route::post('/timeline/delete/{id}', [TweetController::class, 'destroy'])->name('destroy');
+
+Route::get('/user/show/{id}', [UserController::class, 'show'])->name('show');
+
 
 require __DIR__.'/auth.php';
