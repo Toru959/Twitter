@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('welcome');
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/timeline', [TweetController::class, 'showTimelinePage'])->name('timeline');
