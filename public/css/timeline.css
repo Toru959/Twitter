@@ -1,0 +1,62 @@
+body{
+    height: 100%;
+    background-color: #E6ECF0;
+}
+
+.wrapper{
+    width: 50%;
+    height: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.post-box {
+    background-color: #2695E0;
+    text-align: center;
+}
+
+.post-box > input{
+    margin: 1rem;
+    padding: 0 1rem;
+    width: 70%; 
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    height: 2.3rem;
+}
+
+.submit-btn{
+    background-color: orange;
+    color: #ffff;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: none;
+}
+
+.tweet-wrapper{
+
+}
+
+.tweet-box{
+    padding: 2rem;
+    border-top: 1px solid #E6ECF0;
+    border-bottom: 1px solid #E6ECF0;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.tweet-box > div{
+    width: 40%;
+}
+
+.tweet-box > a > img{
+    width: 50%;
+    border: 1px solid black;
+    maring-right: 30px;
+}
+
+.destroy-btn{
+    text-align: right;
+}
+
+
